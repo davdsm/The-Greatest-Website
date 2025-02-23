@@ -40,3 +40,10 @@ a {
     color-scheme: dark;
   }
 }
+
+.container {
+  container-type: inline-size;
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
