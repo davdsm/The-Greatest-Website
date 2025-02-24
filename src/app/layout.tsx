@@ -1,18 +1,19 @@
-"use client";
+"use client"
 
-import { usePathname } from "next/navigation";
-import "@/app/_common/globals.css";
+import { Outfit } from "next/font/google";
 import Header from "@/app/_components/Header";
+import "@/app/_common/globals.css";
+import ClickSpark from "@/app/_components/Elements/ClickSpark";
+
+const outfit = Outfit({ subsets: ["latin"] });
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const currentRoute: string = usePathname();
-
   return (
-    <html lang="en">
+    <html lang="en" className={outfit.className}>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -48,9 +49,19 @@ export default function DashboardLayout({
         <meta property="og:site_name" content="DAVDSM" />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <h1>Footer</h1>
+        <ClickSpark
+          sparkColor="#fff"
+          sparkSize={10}
+          sparkRadius={15}
+          sparkCount={8}
+          duration={400}
+        >
+          <>
+            <Header />
+            <main>{children}</main>
+            <h1>Footer</h1>
+          </>
+        </ClickSpark>
       </body>
     </html>
   );
