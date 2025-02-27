@@ -1,9 +1,12 @@
-"use client"
+"use client";
 
 import { Outfit } from "next/font/google";
+import AOS from "aos";
 import Header from "@/app/_components/Header";
-import "@/app/_common/globals.css";
 import ClickSpark from "@/app/_components/Elements/ClickSpark";
+import "@/app/_common/globals.css";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -12,6 +15,10 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <html lang="en" className={outfit.className}>
       <head>

@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import GradientText from "@/app/_components/Elements/GradientButton";
+import Aurora from "@/app/_components/Elements/Aurora";
 import "./index.scss";
-import Magnet from "../Elements/Magnet";
 
 export const Header = () => {
   const menu: { id: string; name: string; link: string }[] = [
@@ -29,25 +29,41 @@ export const Header = () => {
   const currentRoute: string = usePathname();
 
   return (
-    <header className="container">
-      <div id="logo">
-        <Link href="/">
-          <Image src="/logo.png" width={50} height={50} alt="DAVDSM Logo" />
-        </Link>
+    <>
+      <div id="aurora">
+        <Aurora
+          colorStops={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
+        />
       </div>
-      <div id="menu">
-        <ul>
-          {menu.map((item: { id: string; link: string; name: string }) => (
-            <li
-              key={item.id}
-              className={item.link === currentRoute ? "active" : ""}
-            >
-              <Link href={item.link}>{item.name}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div id="special-button">
+
+      <header className="container">
+        <div
+          id="logo"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          data-aos-offset="1"
+        >
+          <Link href="/">
+            <Image src="/logo.png" width={50} height={50} alt="DAVDSM Logo" />
+          </Link>
+        </div>
+        <div id="menu">
+          <ul>
+            {menu.map((item: { id: string; link: string; name: string }) => (
+              <li
+                key={item.id}
+                className={item.link === currentRoute ? "active" : ""}
+              >
+                <Link href={item.link}>{item.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div id="special-button">
           <GradientText
             colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
             animationSpeed={3}
@@ -71,8 +87,9 @@ export const Header = () => {
               Get Started
             </Link>
           </GradientText>
-      </div>
-    </header>
+        </div>
+      </header>
+    </>
   );
 };
 

@@ -1,9 +1,10 @@
 import Link from "next/link";
+import "./index.scss";
 
 export const Entry = () => {
   return (
-    <h1>
-      Entry <Link href="/portfolio">Portfolio</Link>
-    </h1>
+    <div id="entry">
+      <h6>DAVDSM</h6>
+    </div>
   );
 };

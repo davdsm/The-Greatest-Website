@@ -53,18 +53,19 @@
     }
   }
 
-  &:hover {
+  // initially this was just for hover, but I'm experimenting with making it always visible
+  // &:hover {
+  background: transparent;
+  & > .gradient-overlay::before {
     background: transparent;
-    & > .gradient-overlay::before {
-      background: transparent;
-    }
-    & .text-content {
-      color: var(--black);
-      & svg {
-        color: var(--black) !important;
-      }
+  }
+  & .text-content {
+    color: var(--black);
+    & svg {
+      color: var(--black) !important;
     }
   }
+  //}
 }
 
 @keyframes gradient {

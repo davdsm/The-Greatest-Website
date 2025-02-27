@@ -1,8 +1,16 @@
+#aurora {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3.125rem 0;
+  z-index: 5;
+  position: relative;
   & > #logo {
     width: 50px;
   }
