@@ -1,17 +1,17 @@
 :root {
   --background: #ffffff;
-  --foreground: #000;
+  --foreground: #031716;
   --primary: #8ECCCC;
   --secondary: #50717B;
   --second-black: #3A4042;
-  --black: #000;
+  --black: #031716;
   --white: #fff;
   --mobile: 992px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000;
+    --background: #031716;
     --foreground: #ededed;
   }
 }
@@ -22,6 +22,8 @@ body {
   overflow-x: hidden;
   font-family: 'Outfit', 'Outfit Fallback';
   font-size: 16px;
+  position: relative;
+  min-height: 100vh;
 }
 
 body {
@@ -53,4 +55,10 @@ a {
   width: 80%;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+   font-size: 14px;
+  }
 }

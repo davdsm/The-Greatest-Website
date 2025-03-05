@@ -1,18 +1,11 @@
+import React from "react";
+import { GradientTextProps } from "@/app/_common/interfaces";
 import "./index.scss";
-import React, { ReactNode } from "react";
-
-interface GradientTextProps {
-  children: ReactNode;
-  className?: string;
-  colors?: string[];
-  animationSpeed?: number;
-  showBorder?: boolean;
-}
 
 export const GradientText = ({
   children,
   className = "",
-  colors = ["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"], // Default colors
+  colors = ["#0C959B", "#6BA3BE", "#0C959B", "#6BA3BE", "#0C959B"], // Default colors
   animationSpeed = 8, // Default animation speed in seconds
   showBorder = false, // Default overlay visibility
 }: GradientTextProps) => {

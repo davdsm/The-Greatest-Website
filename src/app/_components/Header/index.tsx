@@ -30,9 +30,14 @@ export const Header = () => {
 
   return (
     <>
-      <div id="aurora">
+      <div
+        id="aurora"
+        data-aos="fade-down"
+        data-aos-duration="1600"
+        data-aos-delay="3000"
+      >
         <Aurora
-          colorStops={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+          colorStops={["#0C959B", "#0A7075", "#0C959B", "#0A7075", "#0C959B"]}
           blend={0.5}
           amplitude={1.0}
           speed={0.5}
@@ -42,10 +47,9 @@ export const Header = () => {
       <header className="container">
         <div
           id="logo"
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
-          data-aos-offset="1"
+          data-aos="fade-down"
+          data-aos-duration="1600"
+          data-aos-delay="800"
         >
           <Link href="/">
             <Image src="/logo.png" width={50} height={50} alt="DAVDSM Logo" />
@@ -63,9 +67,14 @@ export const Header = () => {
             ))}
           </ul>
         </div>
-        <div id="special-button">
+        <div
+          id="special-button"
+          data-aos="fade-down"
+          data-aos-duration="1600"
+          data-aos-delay="1100"
+        >
           <GradientText
-            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            colors={["#032F30", "#0C959B", "#032F30", "#0C959B", "#032F30"]}
             animationSpeed={3}
             showBorder={true}
             className="special-button"

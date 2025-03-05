@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react";
+import { AuroraProps } from "@/app/_common/interfaces";
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 
 import "./index.scss";
@@ -111,17 +112,9 @@ void main() {
 }
 `;
 
-interface AuroraProps {
-  colorStops?: string[];
-  amplitude?: number;
-  blend?: number;
-  time?: number;
-  speed?: number;
-}
-
 export default function Aurora(props: AuroraProps) {
   const {
-    colorStops = ["#00d8ff", "#7cff67", "#00d8ff"],
+    colorStops = ["#6BA3BE", "#274D60", "#6BA3BE"],
     amplitude = 1.0,
     blend = 0.5,
   } = props;

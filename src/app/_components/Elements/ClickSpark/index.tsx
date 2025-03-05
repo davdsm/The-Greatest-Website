@@ -1,22 +1,5 @@
 import React, { useRef, useEffect, useCallback } from "react";
-
-interface ClickSparkProps {
-    sparkColor?: string;
-    sparkSize?: number;
-    sparkRadius?: number;
-    sparkCount?: number;
-    duration?: number;
-    easing?: "linear" | "ease-in" | "ease-out" | "ease-in-out";
-    extraScale?: number;
-    children?: React.ReactNode;
-}
-
-interface Spark {
-    x: number;
-    y: number;
-    angle: number;
-    startTime: number;
-}
+import { ClickSparkProps, Spark } from "@/app/_common/interfaces";
 
 const ClickSpark: React.FC<ClickSparkProps> = ({
     sparkColor = "#fff",
