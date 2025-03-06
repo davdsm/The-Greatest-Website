@@ -1,24 +1,37 @@
 #entry {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100dvh;
-  & > p {
-    font-size: 5.5rem;
-    margin-bottom: 1rem;
-    color: var(--white);
-    text-align: center;
-    line-height: 1.2;
-    max-width: 1000px;
-    font-weight: 600;
-    width: 80%;
-    @media only screen and (max-width: 600px) {
-      font-size: 2.3rem;
+  height: 81dvh;
+  & .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    transition: all ease 0.2s;
+    gap: 10vh;
+    & > p {
+      font-size: 5.5rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.2;
+      max-width: 1000px;
+      font-weight: 400;
+      width: 80%;
+      @media only screen and (max-width: 600px) {
+        font-size: 2.3rem;
+      }
+    }
+
+    & > div {
+      position: absolute;
+      height: 4.25rem;
+      width: 90%;
+      max-width: 28.125rem;
+      bottom: 5rem;
     }
   }
 }

@@ -4,10 +4,12 @@ import { useEffect } from "react";
 import { Outfit } from "next/font/google";
 import AnimatedCursor from "react-animated-cursor";
 import AOS from "aos";
-import Header from "@/app/_components/Header";
+import Header from "@/app/_components/Layout/Header";
 import ClickSpark from "@/app/_components/Elements/ClickSpark";
-import "@/app/_common/globals.css";
+import SplashCursor from "@/app/_components/Elements/AmazingCursor";
 import "aos/dist/aos.css";
+import "@/app/_common/globals.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export default function DashboardLayout({
@@ -56,32 +58,34 @@ export default function DashboardLayout({
         <meta property="og:site_name" content="DAVDSM" />
       </head>
       <body>
-        <AnimatedCursor
-          innerSize={0}
-          outerSize={30}
-          innerScale={1}
-          outerScale={1.3}
-          outerAlpha={0}
-          innerStyle={{
-            backgroundColor: "white",
-          }}
-          outerStyle={{
-            border: "1px solid white",
-          }}
-        />
-        <ClickSpark
-          sparkColor="#fff"
-          sparkSize={10}
-          sparkRadius={9}
-          sparkCount={8}
-          duration={400}
-        >
-          <>
-            <Header />
-            <main>{children}</main>
-            
-          </>
-        </ClickSpark>
+        <ParallaxProvider>
+          <SplashCursor />
+          <AnimatedCursor
+            innerSize={0}
+            outerSize={30}
+            innerScale={1}
+            outerScale={1.3}
+            outerAlpha={0}
+            innerStyle={{
+              backgroundColor: "white",
+            }}
+            outerStyle={{
+              border: "1px solid white",
+            }}
+          />
+          <ClickSpark
+            sparkColor="#fff"
+            sparkSize={10}
+            sparkRadius={9}
+            sparkCount={8}
+            duration={400}
+          >
+            <>
+              <Header />
+              <main>{children}</main>
+            </>
+          </ClickSpark>
+        </ParallaxProvider>
       </body>
     </html>
   );

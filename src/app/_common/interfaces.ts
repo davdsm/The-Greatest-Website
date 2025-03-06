@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, ReactNode, RefObject } from "react";
 
 export interface SplitTextProps {
   text?: string;
@@ -65,4 +65,64 @@ export interface MagnetProps extends HTMLAttributes<HTMLDivElement> {
   inactiveTransition?: string;
   wrapperClassName?: string;
   innerClassName?: string;
+}
+
+export interface ButtonProps {
+  href: string;
+  shape: "round" | "rect";
+  theme?: "light" | "dark";
+  arrow?: boolean;
+  ["data-aos"]?: string;
+  ["data-aos-duration"]?: string;
+  ["data-aos-delay"]?: string;
+  children: ReactNode;
+}
+
+export interface ColorRGB {
+  r: number;
+  g: number;
+  b: number;
+}
+
+export interface SplashCursorProps {
+  SIM_RESOLUTION?: number;
+  DYE_RESOLUTION?: number;
+  CAPTURE_RESOLUTION?: number;
+  DENSITY_DISSIPATION?: number;
+  VELOCITY_DISSIPATION?: number;
+  PRESSURE?: number;
+  PRESSURE_ITERATIONS?: number;
+  CURL?: number;
+  SPLAT_RADIUS?: number;
+  SPLAT_FORCE?: number;
+  SHADING?: boolean;
+  COLOR_UPDATE_SPEED?: number;
+  BACK_COLOR?: ColorRGB;
+  TRANSPARENT?: boolean;
+}
+
+export interface Pointer {
+  id: number;
+  texcoordX: number;
+  texcoordY: number;
+  prevTexcoordX: number;
+  prevTexcoordY: number;
+  deltaX: number;
+  deltaY: number;
+  down: boolean;
+  moved: boolean;
+  color: ColorRGB;
+}
+
+export interface ScrollRevealProps {
+  children: ReactNode;
+  scrollContainerRef?: RefObject<HTMLElement>;
+  enableBlur?: boolean;
+  baseOpacity?: number;
+  baseRotation?: number;
+  blurStrength?: number;
+  containerClassName?: string;
+  textClassName?: string;
+  rotationEnd?: string;
+  wordAnimationEnd?: string;
 }
