@@ -14,9 +14,14 @@
     padding: 0;
     margin: 0;
     width: 100%;
+
     & > li {
       @media only screen and (max-width: 600px) {
-       width: 50%;
+        width: 50%;
+        text-align: center;
+        &:last-child {
+          width: 100%;
+        }
       }
       & img {
         width: 80%;
@@ -24,6 +29,7 @@
         filter: grayscale(100%);
         opacity: 0.6;
         object-fit: contain;
+        margin: 0 auto;
       }
     }
   }

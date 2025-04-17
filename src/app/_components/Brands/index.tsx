@@ -7,7 +7,7 @@ export const Brands = () => {
     <div id="brands">
       <ul>
         {brands.map((brand: number) => (
-          <li>
+          <li key={brand}>
             <img
               data-aos="fade-up"
               data-aos-duration="1600"

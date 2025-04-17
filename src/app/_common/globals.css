@@ -1,19 +1,12 @@
 :root {
-  --background: #ffffff;
-  --foreground: #031716;
+  --background: #031716;
+  --foreground: #ededed;
   --primary: #8ECCCC;
   --secondary: #50717B;
   --second-black: #3A4042;
   --black: #031716;
   --white: #fff;
   --mobile: 992px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #031716;
-    --foreground: #ededed;
-  }
 }
 
 html,
@@ -23,7 +16,7 @@ body {
   font-family: 'Outfit', 'Outfit Fallback';
   font-size: 16px;
   position: relative;
-  min-height: 100vh;
+  min-height: 300vh;
 }
 
 body {
