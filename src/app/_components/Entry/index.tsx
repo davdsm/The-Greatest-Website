@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SplitText from "@/app/_components/Elements/SplitText/intex";
 import Button from "@/app/_components/Elements/Button";
 
 import "./index.scss";
-import { Parallax } from "react-scroll-parallax";
+import { MaskText } from "../MaskText/intex";
 
 export const Entry = () => {
   const [isReady, setisReady] = useState<boolean>(false);
@@ -13,21 +12,13 @@ export const Entry = () => {
   useEffect(() => {
     setTimeout(() => {
       setisReady(true);
-    }, 4000);
+    }, 1500);
   }, []);
-
+  // Building digital products, brands and experiences
   return (
     <div id="entry">
-      <Parallax speed={-10} className="content">
-        <SplitText
-          text="Building digital products, brands and experiences."
-          className=""
-          delay={150}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,30px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          threshold={0.2}
-          rootMargin="-30px"
-        />
+      <div className="content">
+        <MaskText delay={0} phrases={["Building digital ", "products brands and", "experiences"]} align="center" size="5.5rem"  />
         {isReady && (
           <div className="two-buttons">
             <Button
@@ -68,7 +59,7 @@ export const Entry = () => {
           </div>
         )}
         {!isReady && <div></div>}
-      </Parallax>
+      </div>
     </div>
   );
 };

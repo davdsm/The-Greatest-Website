@@ -12,6 +12,17 @@
     height: 100svh;
     transition: all ease 0.2s;
     gap: 10vh;
+
+    & > .maskText {
+      position: absolute;
+      width: 100%;
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    
     & > p {
       font-size: 5.5rem;
       margin-bottom: 1rem;
@@ -26,7 +37,7 @@
       }
     }
 
-    & > div {
+    & > div.two-buttons {
       position: absolute;
       height: 4.25rem;
       width: 90%;

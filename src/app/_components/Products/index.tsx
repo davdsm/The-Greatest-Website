@@ -3,7 +3,7 @@ import "./index.scss";
 
 export const Products = () => {
   const products: {
-    icon: ReactElement<any, any>;
+    icon: ReactElement<React.SVGProps<SVGSVGElement>>;
     title: string;
     desc: string;
   }[] = [
@@ -13,7 +13,7 @@ export const Products = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
         >
           <path
@@ -33,7 +33,7 @@ export const Products = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
         >
           <path
@@ -52,7 +52,7 @@ export const Products = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="currentColor"
         >
           <path
@@ -71,7 +71,7 @@ export const Products = () => {
     <ul id="products">
       {products.map((product, index) => (
         <li
-          key={index}
+          key={product.title}
           data-aos="fade-up"
           data-aos-duration="1600"
           data-aos-delay={index * 100}

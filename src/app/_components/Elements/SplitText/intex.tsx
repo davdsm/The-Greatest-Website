@@ -3,17 +3,17 @@ import {
   useSprings,
   animated
 } from "@react-spring/web";
-import { useEffect, useRef, useState, MutableRefObject } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const SplitText: React.FC<SplitTextProps> = ({
   text = "",
   className = "",
   delay = 100,
-  animationFrom = { opacity: 0, transform: "translate3d(0,40px,0)" },
+  animationFrom = { opacity: 0, transform: "translate3d(0,10px,0)" },
   animationTo = { opacity: 1, transform: "translate3d(0,0,0)" },
   easing = (t: number) => t,
   threshold = 0.1,
-  rootMargin = "-100px",
+  rootMargin = "-10px",
   textAlign = "center",
   onLetterAnimationComplete,
 }) => {
