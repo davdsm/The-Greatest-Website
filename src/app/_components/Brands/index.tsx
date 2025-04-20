@@ -4,7 +4,7 @@ export const Brands = () => {
   const brands: number[] = [1, 2, 3, 4, 5];
 
   return (
-    <div id="brands">
+    <section id="brands">
       <ul>
         {brands.map((brand: number) => (
           <li key={brand}>
@@ -18,7 +18,7 @@ export const Brands = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

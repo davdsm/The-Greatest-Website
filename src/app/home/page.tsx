@@ -1,6 +1,7 @@
 import { Entry } from "@/app/_components/Entry";
 import { Brands } from "@/app/_components/Brands";
 import { Products } from "@/app/_components/Products";
+import NiceList from "../_components/NiceList";
 
 export const Home = () => {
   return (
@@ -8,6 +9,7 @@ export const Home = () => {
       <Entry />
       <Brands />
       <Products />
+      <NiceList />
     </>
   );
 };

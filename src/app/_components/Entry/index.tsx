@@ -5,6 +5,8 @@ import Button from "@/app/_components/Elements/Button";
 
 import "./index.scss";
 import { MaskText } from "../MaskText/intex";
+import LineComponent from "../Elements/Shape/line";
+import { Parallax } from "react-scroll-parallax";
 
 export const Entry = () => {
   const [isReady, setisReady] = useState<boolean>(false);
@@ -16,9 +18,18 @@ export const Entry = () => {
   }, []);
   // Building digital products, brands and experiences
   return (
-    <div id="entry">
+    <section id="entry">
+      <Parallax speed={-20}>
+        <LineComponent className="diagonal" />
+      </Parallax>
+
       <div className="content">
-        <MaskText delay={0} phrases={["Building digital ", "products brands and", "experiences"]} align="center" size="5.5rem"  />
+        <MaskText
+          delay={500}
+          phrases={["Building digital ", "products brands and", "experiences"]}
+          align="center"
+          size="5.5rem"
+        />
         {isReady && (
           <div className="two-buttons">
             <Button
@@ -60,6 +71,6 @@ export const Entry = () => {
         )}
         {!isReady && <div></div>}
       </div>
-    </div>
+    </section>
   );
 };

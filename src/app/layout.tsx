@@ -3,13 +3,13 @@
 import { useEffect } from "react";
 import { Outfit } from "next/font/google";
 import AnimatedCursor from "react-animated-cursor";
+import Lenis from "lenis";
 import AOS from "aos";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Header from "@/app/_components/Layout/Header";
 import ClickSpark from "@/app/_components/Elements/ClickSpark";
-import SplashCursor from "@/app/_components/Elements/AmazingCursor";
 import "aos/dist/aos.css";
 import "@/app/_common/globals.css";
-import { ParallaxProvider } from "react-scroll-parallax";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export default function DashboardLayout({
@@ -17,8 +17,18 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
+  let lenis: Lenis;
+
+  // Use requestAnimationFrame to continuously update the scroll
+  const raf = (time: DOMHighResTimeStamp) => {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  };
+
   useEffect(() => {
     AOS.init();
+    lenis = new Lenis();
+    requestAnimationFrame(raf);
   }, []);
 
   return (
@@ -59,7 +69,6 @@ export default function DashboardLayout({
       </head>
       <body>
         <ParallaxProvider>
-          <SplashCursor />
           <AnimatedCursor
             innerSize={0}
             outerSize={30}

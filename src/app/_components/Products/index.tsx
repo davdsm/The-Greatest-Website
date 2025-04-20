@@ -68,20 +68,22 @@ export const Products = () => {
   ];
 
   return (
-    <ul id="products">
-      {products.map((product, index) => (
-        <li
-          key={product.title}
-          data-aos="fade-up"
-          data-aos-duration="1600"
-          data-aos-delay={index * 100}
-        >
-          {product.icon}
-          <h2>{product.title}</h2>
-          <p>{product.desc}</p>
-        </li>
-      ))}
-    </ul>
+    <section id="products">
+      <ul>
+        {products.map((product, index) => (
+          <li
+            key={product.title}
+            data-aos="fade-up"
+            data-aos-duration="1600"
+            data-aos-delay={index * 100}
+          >
+            {product.icon}
+            <h2>{product.title}</h2>
+            <p>{product.desc}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 export default Products;
