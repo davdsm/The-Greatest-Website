@@ -19,6 +19,9 @@ export const NiceListItem = ({ index, title, setModal }: NiceListItemProps) => {
         setModal({ active: false, index });
       }}
       className="project"
+      data-aos="fade-up"
+      data-aos-duration="1600"
+      data-aos-delay={index * 100}
     >
       <h2>{title}</h2>
       <p>Design & Development</p>

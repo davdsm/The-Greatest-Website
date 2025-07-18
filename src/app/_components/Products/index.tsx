@@ -25,7 +25,7 @@ export const Products = () => {
       ),
 
       title: "Digital Experiences",
-      desc: "From digital marketing to E-Commerces, websites and Android & iOS apps, our team works hard to deliver exceptional results for our clients.",
+      desc: "From digital marketing to E-Commerces, websites and Android & iOS apps, I'm working hard to deliver exceptional results for my clients.",
     },
     {
       icon: (
@@ -44,7 +44,7 @@ export const Products = () => {
         </svg>
       ),
       title: "Hosting",
-      desc: "We are proud to provide reliable and secure hosting solutions, so you can focus on growing your business without worrying about technical complexities.",
+      desc: "I'm proud to provide reliable and secure hosting solutions, so you can focus on growing your business without worrying about technical complexities.",
     },
     {
       icon: (
@@ -63,7 +63,7 @@ export const Products = () => {
         </svg>
       ),
       title: "Payments",
-      desc: "We create a secure and user-friendly payment system, ensuring smooth transactions for your customers. Elevate your e-commerce experience with our tailored payment solutions",
+      desc: "I'm creating a secure and user-friendly payment system, ensuring smooth transactions for your customers. Elevate your e-commerce experience with my tailored payment solutions",
     },
   ];
 

@@ -3,36 +3,43 @@
 import { useState } from "react";
 import NiceListItem from "../Elements/NiceListItem";
 import NiceModal from "./NiceModal";
-/* import Modal from '../components/modal'; */
+import "./index.scss";
 
 const projects = [
   {
-    title: "C2 Montreal",
-    src: "c2montreal.png",
+    title: "Singula",
+    src: "/portfolio/singula/main.png",
     color: "#000000",
+    category: "Digital Experiences",
   },
 
   {
-    title: "Office Studio",
-    src: "officestudio.png",
+    title: "Aquitex",
+    src: "/portfolio/aquitex/main.png",
     color: "#8C8C8C",
+    category: "Digital Experiences",
   },
 
   {
-    title: "Locomotive",
-    src: "locomotive.png",
+    title: "Salazar Concept",
+    src: "/portfolio/salazar/main.png",
     color: "#EFE8D3",
+    category: "Digital Experiences",
   },
 
   {
-    title: "Silencio",
-    src: "silencio.png",
+    title: "Toca dos Amigos",
+    src: "/portfolio/toca/main.png",
     color: "#706D63",
+    category: "Digital Experiences",
   },
 ];
 
 export const NiceList = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
+
+  console.log("modal", modal);
+  
 
   return (
     <section id="niceList">
